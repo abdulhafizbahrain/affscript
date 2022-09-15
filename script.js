@@ -1,0 +1,1 @@
+import {alertRedirect} from "main.js"

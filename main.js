@@ -49,7 +49,7 @@ function linkRedirect(timeOut = 1000){
     }, timeOut);
 }
 
-function alertRedirect(timeOut = 1000, message = "Click OK to continue !"){
+export function alertRedirect(timeOut = 1000, message = "Click OK to continue !"){
     setTimeout(function(){
         alert(message);
         window.location = Data();
