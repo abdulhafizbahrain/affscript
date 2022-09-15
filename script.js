@@ -1,3 +1,3 @@
-// import logic from './main.js'
-import logic from 'https://cdn.jsdelivr.net/gh/abdulhafizbahrain/affscript@master/main.js'
+// import './main.js'
+import 'https://cdn.jsdelivr.net/gh/abdulhafizbahrain/affscript@master/main.js'
 
