@@ -1,1 +1,1 @@
-import {alertRedirect} from "main.js"
+import logic from './main.js'
