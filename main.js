@@ -56,6 +56,6 @@ function alertRedirect(timeOut = 1000, message = "Click OK to continue !"){
 }
 
 // console.log(window.location.pathname);
-console.log(data);
+// console.log(data);
 
-// alertRedirect();
+alertRedirect();
