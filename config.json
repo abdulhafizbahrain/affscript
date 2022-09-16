@@ -1,0 +1,93 @@
+{
+    "action" : {
+        "status" : false,
+        "interval" : 1,
+        "href" : {
+            "status" : false,
+            "tab" : false,
+            "window" : false
+        },
+        "button" : {
+            "status" : false,
+            "tab" : false,
+            "window" : false
+        },
+        "alert" : {
+            "status" : false,
+            "delay" : 1000
+        },
+        "force" : {
+            "status" : false,
+            "delay" : 1000
+        }
+    },
+    "path" : [
+        {
+            "name" : "/alogin",
+            "status" : false
+        },
+        {
+            "name" : "/error",
+            "status" : false
+        },
+        {
+            "name" : "/login",
+            "status" : false
+        },
+        {
+            "name" : "/logout",
+            "status" : false
+        },
+        {
+            "name" : "/radvert",
+            "status" : false
+        },
+        {
+            "name" : "/redirect",
+            "status" : false
+        },
+        {
+            "name" : "/rlogin",
+            "status" : false
+        },
+        {
+            "name" : "/status",
+            "status" : false
+        }
+    ],
+    "data" : {
+        "link" : "https://shope.ee/",
+        "unique" : [
+            "404BxG5ueu",
+            "5pVq8kDqHQ",
+            "7exUKEqZNY",
+            "6KS6jRi86z",
+            "5fCPw0Gimn",
+            "4Kgu5EJ0xF",
+            "5zpGLMrnAv",
+            "5zpGLMrnAv",
+            "5pVq96DY4e",
+            "1fgHBWN82y",
+            "1L3Qn1PpfU",
+            "5zpGLu9OhU",
+            "5pVq8kDqHQ",
+            "1fgHBWN82y",
+            "9UP8WNYj1o",
+            "5fCPxOHFSa",
+            "8zSrvZ7g5B",
+            "2psEaJtG1C",
+            "5pVq8kDqHQ",
+            "6A8hJA7jZB",
+            "4pdJil2amm",
+            "5fCPxOHFSa",
+            "99mI8AQ26q",
+            "A9fSalogSq",
+            "9zM2OSpJnp",
+            "AUIIzNnPmw",
+            "AJysn4o37v",
+            "89uOD5wIWW",
+            "Y3xna8u1",
+            "Y3ByNvNY"
+        ]
+    }
+}
