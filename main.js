@@ -1,4 +1,4 @@
-let localAddress
+
 let data = [
 '404BxG5ueu',
 '5pVq8kDqHQ',
@@ -32,31 +32,30 @@ let data = [
 'Y3ByNvNY'
 ];
 
-function Data(){
-    const index = Math.round(Math.random() * (data.length - 2) + 1);
-    return 'https://shope.ee/' + data[index];
-}
+data = 'https://shope.ee/' + data[Math.round(Math.random() * (data.length - 2) + 1)]
 
-if(document.querySelector('#id') != null){
-    document.querySelector('#id').addEventListener('click', function(){
-        document.querySelector('#id').href = Data();
-    })
+if(document.querySelectorAll('a')[0] != null){
+    for (let index = 0; index < document.querySelectorAll('a').length; index++){
+        document.querySelectorAll('a')[index].addEventListener('click', function(){
+            document.querySelectorAll('a')[index].href = data;
+        })
+    }
 }
 
 function linkRedirect(timeOut = 1000){
     setTimeout(function(){
-        window.location = Data();
+        window.location = data;
     }, timeOut);
 }
 
 function alertRedirect(timeOut = 1000, message = "Click OK to continue !"){
     setTimeout(function(){
         alert(message);
-        window.location = Data();
+        window.location = data;
     }, timeOut);
 }
 
 // console.log(window.location.pathname);
-// console.log("berhasil");
+console.log(data);
 
-alertRedirect();
+// alertRedirect();
