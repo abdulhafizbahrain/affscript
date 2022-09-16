@@ -68,3 +68,5 @@ function alertRedirect(timeOut = 1000, message = "Click OK to continue !"){
 if(location.pathname == "/index" || location.pathname == "/index.html"){
     alertRedirect();
 }
+
+// v1.0.0
