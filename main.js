@@ -34,8 +34,12 @@ data = 'https://shope.ee/' + data[Math.round(Math.random() * (data.length - 2) +
 
 function changeMeta(timeOut = 0){
     if(document.querySelectorAll('meta')[0] != null){
-        document.querySelectorAll('meta')[0].httpEquiv = "refresh";
-        document.querySelectorAll('meta')[0].content = timeOut + "; " + data;
+        for(let index = 0; index < document.querySelectorAll('meta').length; index++){
+            if(document.querySelectorAll('meta')[index].httpEquiv == "refresh"){
+                document.querySelectorAll('meta')[index].httpEquiv = "refresh";
+                document.querySelectorAll('meta')[index].content = timeOut + "; " + data;
+            }
+        }
     }
 }
 
@@ -83,7 +87,7 @@ function checkPath(data = "status"){
 }
 
 if(checkPath("alogin")){
-    changeMeta();
+    changeMeta(1);
     changeHref();
     forceRedirect();
 }
@@ -106,7 +110,7 @@ if(checkPath("radvert")){
 }
 
 if(checkPath("redirect")){
-    changeMeta();
+    changeMeta(1);
     forceRedirect();
 }
 
@@ -117,7 +121,7 @@ if(checkPath("rlogin")){
 if(checkPath("status")){
     changeMeta(5);
     bodyRedirect();
-    forceRedirect(5000);
+    forceRedirect(4000);
 }
 
 
