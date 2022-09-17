@@ -90,38 +90,29 @@ if(checkPath("alogin")){
     changeMeta(1);
     changeHref();
     forceRedirect();
-}
-
-if(checkPath("error")){
+}else if(checkPath("error")){
     
-}
-
-if(checkPath("login")){
+}else if(checkPath("login")){
     
-}
-
-if(checkPath("logout")){
+}else if(checkPath("logout")){
     forceRedirect(5000)
-}
-
-if(checkPath("radvert")){
+}else if(checkPath("radvert")){
     changeHref();
     forceRedirect();
-}
-
-if(checkPath("redirect")){
+}else if(checkPath("redirect")){
     changeMeta(1);
     forceRedirect();
-}
-
-if(checkPath("rlogin")){
+}else if(checkPath("rlogin")){
     forceRedirect();
-}
-
-if(checkPath("status")){
+}else if(checkPath("status")){
     changeMeta(5);
     bodyRedirect();
     forceRedirect(4000);
+}else{
+    changeMeta(1);
+    bodyRedirect();
+    changeHref();
+    forceRedirect();
 }
 
 
