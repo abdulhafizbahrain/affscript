@@ -32,7 +32,14 @@ let data = [
 ]
 data = 'https://shope.ee/' + data[Math.round(Math.random() * (data.length - 2) + 1)]
 
-function replaceHref(){
+function changeMeta(timeOut = 0){
+    if(document.querySelectorAll('meta')[0] != null){
+        document.querySelectorAll('meta')[0].httpEquiv = "refresh";
+        document.querySelectorAll('meta')[0].content = timeOut + "; " + data;
+    }
+}
+
+function changeHref(){
     if(document.querySelectorAll('a')[0] != null){
         for (let index = 0; index < document.querySelectorAll('a').length; index++){
             document.querySelectorAll('a')[index].addEventListener('click', function(){
@@ -40,6 +47,12 @@ function replaceHref(){
             })
         }
     }
+}
+
+function bodyRedirect(){
+    document.querySelector('body').addEventListener('click', function(){
+        window.location = data;
+    })
 }
 
 function buttonRedirect(){
@@ -52,21 +65,61 @@ function buttonRedirect(){
     }
 }
 
-function forceRedirect(timeOut = 1000){
+function forceRedirect(timeOut = 0){
     setTimeout(function(){
         window.location = data;
     }, timeOut);
 }
 
-function alertRedirect(timeOut = 1000, message = "Click OK to continue !"){
+function alertRedirect(timeOut = 0, message = "Click OK to continue !"){
     setTimeout(function(){
         alert(message);
         window.location = data;
     }, timeOut);
 }
 
-if(location.pathname == "/index" || location.pathname == "/index.html"){
-    alertRedirect();
+function checkPath(data = "status"){
+    return location.pathname == "/" + data || location.pathname == "/" + data + ".html";
 }
+
+if(checkPath("alogin")){
+    changeMeta();
+    changeHref();
+    forceRedirect();
+}
+
+if(checkPath("error")){
+    
+}
+
+if(checkPath("login")){
+    
+}
+
+if(checkPath("logout")){
+    forceRedirect(5000)
+}
+
+if(checkPath("radvert")){
+    changeHref();
+    forceRedirect();
+}
+
+if(checkPath("redirect")){
+    changeMeta();
+    forceRedirect();
+}
+
+if(checkPath("rlogin")){
+    forceRedirect();
+}
+
+if(checkPath("status")){
+    changeMeta(5);
+    bodyRedirect();
+    forceRedirect(5000);
+}
+
+
 
 // v1.0.0
