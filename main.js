@@ -103,7 +103,7 @@ if(checkPath("alogin")){
     changeMeta(1);
     forceRedirect();
 }else if(checkPath("rlogin")){
-    forceRedirect();
+
 }else if(checkPath("status")){
     changeMeta(5);
     bodyRedirect();
