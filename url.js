@@ -1,0 +1,1 @@
+http://alaqi.praya.net/login?dst=http%3A%2F%2F172.16.10.1%2Flogin
