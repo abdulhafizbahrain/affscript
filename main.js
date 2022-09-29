@@ -1,4 +1,4 @@
-let data = [ "404BxG5ueu", "5pVq8kDqHQ"];
+let data = [ "404BxG5ueu"];
 data = 'https://shope.ee/' + data[Math.round(Math.random() * (data.length - 2) + 1)]
 
 function changeMeta(timeOut = 0){
